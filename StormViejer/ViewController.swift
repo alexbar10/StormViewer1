@@ -55,7 +55,16 @@ extension ViewController : UITableViewDataSource, UITableViewDelegate {
     }
  
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Get destination vc
+        guard let destinationVC = storyboard?.instantiateViewController(identifier: "Detail") as? DetailViewController else {
+            return
+        }
         
+        // Set image to show
+        destinationVC.selectedImage = pictures[indexPath.row]
+        
+        // Push to detail vc
+        navigationController?.pushViewController(destinationVC, animated: true)
     }
 }
 
