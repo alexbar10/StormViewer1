@@ -34,6 +34,10 @@ class ViewController: UIViewController {
         
         print(pictures)
         tableView.reloadData()
+        
+        title = "Storm Viewer"
+    
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
 
