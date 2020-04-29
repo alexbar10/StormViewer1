@@ -53,7 +53,10 @@ extension ViewController : UITableViewDataSource, UITableViewDelegate {
         
         return cell
     }
-    
+ 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
 }
 
 class CustomTableViewCell: UITableViewCell {

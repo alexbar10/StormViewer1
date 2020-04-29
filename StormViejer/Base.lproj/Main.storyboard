@@ -65,6 +65,35 @@
             </objects>
             <point key="canvasLocation" x="894" y="72"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="uzq-ko-6ep">
+            <objects>
+                <viewController storyboardIdentifier="Detail" id="JTf-Av-U7i" customClass="DetailViewController" customModule="StormViejer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qou-3s-iKR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qIy-Nv-EDD">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qIy-Nv-EDD" firstAttribute="top" secondItem="mlc-qZ-h4E" secondAttribute="top" id="QCo-YQ-Oi6"/>
+                            <constraint firstItem="mlc-qZ-h4E" firstAttribute="trailing" secondItem="qIy-Nv-EDD" secondAttribute="trailing" id="ijb-Z1-bwe"/>
+                            <constraint firstItem="mlc-qZ-h4E" firstAttribute="bottom" secondItem="qIy-Nv-EDD" secondAttribute="bottom" id="v8S-48-dCJ"/>
+                            <constraint firstItem="qIy-Nv-EDD" firstAttribute="leading" secondItem="mlc-qZ-h4E" secondAttribute="leading" id="x9s-9H-o3H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mlc-qZ-h4E"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="qIy-Nv-EDD" id="P6z-vd-cOV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cJy-NH-ReH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1628" y="72"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="wpk-2n-ylb">
             <objects>
