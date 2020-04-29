@@ -16,6 +16,9 @@ class DetailViewController: UIViewController {
      // MARK: -   Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Add bar button for share image
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(sharedTapped))
 
         if let imageName = selectedImage {
             imageView.image = UIImage(named: imageName)
@@ -34,5 +37,16 @@ class DetailViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.hidesBarsOnTap = false
+    }
+    
+    // MARK: - Shares image
+    @objc func sharedTapped() {
+        guard let image = imageView.image?.jpegData(compressionQuality: 0.80) else {
+            print("Not found image")
+            return }
+        
+        let vc = UIActivityViewController(activityItems: [image, selectedImage], applicationActivities: [])
+        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(vc, animated: true, completion: nil)
     }
 }

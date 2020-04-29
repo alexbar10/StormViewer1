@@ -38,6 +38,15 @@ class ViewController: UIViewController {
         title = "Storm Viewer"
     
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        // Add bar button for recommends the app
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(recommendApp))
+    }
+    
+    @objc func recommendApp() {
+        let vc = UIActivityViewController(activityItems: ["Use this app:)"], applicationActivities: [])
+        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(vc, animated: true, completion: nil)
     }
 }
 
